@@ -10,6 +10,7 @@ import cv2
 from keras.applications.imagenet_utils import preprocess_input, decode_predictions
 from keras.models import load_model
 from keras.preprocessing import image
+from io import BufferedReader
 
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template
@@ -44,19 +45,18 @@ def index():
 def predict():
     if request.method == 'POST':
         # Get the file from post request
-        f = request.files['file']
-        print(f)
-        # Save the file to ./uploads
-        basepath = os.path.dirname(__file__)
-        print(basepath)
-        file_path = os.path.join(
-            basepath, 'uploads', secure_filename(f.filename))
-        f.save(file_path)
-        image_size=224
-        image_path = file_path
+        # f = request.files['file']
+        # print(f)
+        # # Save the file to ./uploads
+        # basepath = os.path.dirname(__file__)
+        # print(basepath)
+        # file_path = os.path.join(
+        #     basepath, 'uploads', secure_filename(f.filename))
+        # f.save(file_path)
+        image_size=22
         try:
-            image = cv2.imread(image_path,cv2.IMREAD_COLOR)
-            image = cv2.resize(image,(image_size,image_size))
+            image = cv2.imread(image,cv2.IMREAD_COLOR)
+            image = cv2.resize(image(image_size,image_size))
         finally:
             print("done")
         val = np.array(image)
