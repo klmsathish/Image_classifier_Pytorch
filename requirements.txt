@@ -4,5 +4,5 @@ sklearn
 Flask
 gunicorn
 keras
-cv2
+opencv-python-headless==4.2.0.32
 werkzeug
