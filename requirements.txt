@@ -7,3 +7,4 @@ keras
 tensorflow-cpu
 opencv-python-headless==4.2.0.32
 werkzeug
+h5py==2.10.0
