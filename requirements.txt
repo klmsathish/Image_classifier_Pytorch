@@ -1,5 +1,5 @@
 pandas
-numpy==1.18.0,
+numpy==1.18.5
 sklearn
 Flask
 gunicorn
