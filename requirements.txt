@@ -4,6 +4,6 @@ sklearn
 Flask
 gunicorn
 keras
-tensorflow
+tensorflow==2.0.0
 opencv-python-headless==4.2.0.32
 werkzeug
